@@ -1,6 +1,8 @@
 '''调用数据方法'''
+import csv
 
-def read_txt(file_name=r"D:\git_root\5kCRM\data\user.txt"):
+
+def read_txt(file_name):
     with open(file_name,"r+",encoding="utf-8") as f:
         lines = f.readlines()
         data_list = []
@@ -11,3 +13,12 @@ def read_txt(file_name=r"D:\git_root\5kCRM\data\user.txt"):
         return data_list
 # r = read_txt()
 # print(r)
+
+def read_csv(file_name):
+    with open(file_name,'r',encoding="utf-8") as f:
+        data = csv.reader(f)
+        lst = []
+        for user in data:
+            lst.append(user)
+        return lst
+#read_csv(r"D:\git_root\5kCRM\data\business.csv")

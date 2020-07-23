@@ -6,18 +6,11 @@ from page.login_page import LoginCase
 from test_case.test_login import LoginTestCase
 
 class BusinessCase(BasePage):
-    def __init__(self):
-        super().__init__()
+    def __init__(self,driver):
+        # super().__init__()
+        self.driver = driver
         self.url = "http://localhost/index.php?m=user&a=login"
         self.driver.get(url=self.url)
-
-        # 登录
-
-        self.driver.find_element(By.NAME, 'name').clear()
-        self.driver.find_element(By.NAME, 'name').send_keys("admin")
-        self.driver.find_element(By.NAME, 'password').clear()
-        self.driver.find_element(By.NAME, 'password').send_keys("banxian123")
-        self.driver.find_element(By.NAME, 'submit').click()
 
         #元素定位符
         self.dw_into_bus = (By.LINK_TEXT,'商机')          #进入商机页面

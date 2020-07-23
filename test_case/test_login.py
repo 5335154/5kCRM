@@ -6,9 +6,16 @@ from page.login_page import LoginCase
 
 
 class LoginTestCase(unittest.TestCase):
+    def setUp(self):
+        driver = chrome_driver()
+        self.driver = driver
+
+    def tearDown(self):
+        self.driver.quit()
+
     def test_login(self):
-        lg = LoginCase()
-        read = read_txt()
+        lg = LoginCase(self.driver)
+        read = read_txt(r"D:\git_root\5kCRM\data\user.txt")
         username = read[0][0]
         password = read[0][1]
         shiji = lg.login(username,password)

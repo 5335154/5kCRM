@@ -3,8 +3,8 @@ from driver.browser import chrome_driver
 
 
 class BasePage():
-    def __init__(self):
-        self.driver = chrome_driver()
+    def __init__(self,driver):
+        self.driver = driver
 
     def duanyan(self):
         shiji = self.driver.current_url
