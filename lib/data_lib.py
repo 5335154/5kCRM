@@ -19,6 +19,8 @@ def read_csv(file_name):
         data = csv.reader(f)
         lst = []
         for user in data:
+            user = user[0].split()
             lst.append(user)
         return lst
-#read_csv(r"D:\git_root\5kCRM\data\business.csv")
+# data = read_csv(r"D:\git_root\5kCRM\data\business.csv")
+# print(data)

@@ -20,7 +20,7 @@ class LoginTestCase(unittest.TestCase):
         password = read[0][1]
         shiji = lg.login(username,password)
 
-        self.assertEqual("http://localhost/index.php?m=dynamic&a=index", shiji)
+        self.assertEqual("http://192.168.1.120/index.php?m=dynamic&a=index", shiji)
 
 
 if __name__ == '__main__':
