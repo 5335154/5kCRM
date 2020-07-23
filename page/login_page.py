@@ -8,7 +8,7 @@ class LoginCase(BasePage):
     def __init__(self,driver):
         #super().__init__()
         self.driver = driver
-        self.url = "http://localhost/index.php?m=user&a=login"
+        self.url = "http://192.168.1.120/index.php?m=user&a=login"
         #元素定位符
         self.locator_username = (By.NAME, 'name')
         self.locator_password = (By.NAME, 'password')
@@ -34,5 +34,3 @@ class LoginCase(BasePage):
         shiji = BasePage.duanyan(self)
         return shiji
 
-# lg = LoginCase()
-# lg.login()
