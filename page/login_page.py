@@ -34,5 +34,13 @@ class LoginCase(BasePage):
         self.quit()
         return shiji
 
+    def login1(self,username,password):
+        self.open(self.url)
+        self.ele_username(username)
+        self.ele_password(password)
+        self.ele_submit()
+        time.sleep(2)
+        return self.driver
+
 # lg = LoginCase()
 # lg.login()

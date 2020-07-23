@@ -7,8 +7,8 @@ class BasePage():
         self.driver = chrome_driver()
 
     def duanyan(self):
-        shiti = self.driver.current_url
-        return shiti
+        shiji = self.driver.current_url
+        return shiji
 
     def open(self,url):
         self.driver.get(url=url)
