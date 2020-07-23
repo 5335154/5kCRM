@@ -9,8 +9,8 @@ class BusinessCase(BasePage):
     def __init__(self,driver):
         # super().__init__()
         self.driver = driver
-        self.url = "http://localhost/index.php?m=user&a=login"
-        self.driver.get(url=self.url)
+        # self.url = "http://192.168.1.120/index.php?m=user&a=login"
+        # self.driver.get(url=self.url)
 
         #元素定位符
         self.dw_into_bus = (By.LINK_TEXT,'商机')          #进入商机页面
@@ -71,7 +71,7 @@ class BusinessCase(BasePage):
         time.sleep(2)
         shiji = self.driver.find_element(*self.dw_duanyan).text
         time.sleep(1)
-        self.quit()
+#        self.quit()
         return shiji
 
 # bus = BusinessCase()

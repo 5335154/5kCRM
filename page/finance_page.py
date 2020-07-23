@@ -6,7 +6,7 @@ from page.base_page import BasePage
 class LoginCase(BasePage):
     def __init__(self):
         super().__init__()
-        self.url = "http://localhost/index.php?m=user&a=login"
+        self.url = "http://192.168.1.120/index.php?m=user&a=login"
         #元素定位符
 
     def ele_search(self):
